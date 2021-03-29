@@ -9,6 +9,7 @@
     </head>
     <body>
         <div id="app">
+            {{ num }}
             <app-header v-bind:propsdata="num"></app-header>
             <app-content v-on:pass="deliverNum"></app-content>
         </div>        

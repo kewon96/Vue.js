@@ -71,7 +71,7 @@ new Vue({
         },
         plusOne: function() {
             this.num++;
-            //  OOP의 getter와 같음
+            // OOP의 getter와 같음
             // 여기서의 this는 해당 object-data를 가리킴
             console.log(this.num); 
 

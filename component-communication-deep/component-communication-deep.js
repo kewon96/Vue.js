@@ -3,14 +3,14 @@
  */
 
 var appHeader = {
-    template: '<div>header</div>',
+    template: '<div>{{ propsdata }}</div>',
     props: ['propsdata']
 }
 
 var appContent = {
     template: '<div>content<button v-on:click="passNum">pass</button></div>',
     methods: {
-        passNum: function() {
+        passNum: function(event) {
             this.$emit('pass', 10);
         }
     }
@@ -29,6 +29,7 @@ new Vue({
         deliverNum: function(value) {
             // app-content에서 정의할 때 value는 암묵적으로 같이온다.
             this.num = value;
+            this.num++
         }
     }
 })
