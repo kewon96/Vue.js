@@ -9,7 +9,26 @@
 <body>
     <div id="app">
         <p v-bind:id="uuid">{{ number }}</p>
+        <p v-bind:class="cName">{{ number }}</p>
         <p>{{ doubleNumber }}</p>
+        <div v-if="loading"> <!-- 로그인하기 전 -->
+            Loading...
+        </div>
+        <div v-else="loading"> <!-- 로그인하고 난 후 -->
+            test user has been logged in
+        </div>
+        <div v-show="loading">
+            test
+        </div>
+
+        <!-- TODO: input box를 만들고 입력된 값을 밑에 있는 p에 출력되게 -->
+        <input type="text" v-model="message">
+        <p>{{ message }}</p>
+
+        <!-- TODO: checkbox를 체크를 하면 옆에 있는 p 태그에 1이 보여지고
+             체크를 안했다면 0이 보여지게 -->
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">{{ checkedConvert }}</label>
     </div>
 
     
