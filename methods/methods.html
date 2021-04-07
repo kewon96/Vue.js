@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- TODO: 'click me'버튼을 클릭하거나 enter를 누르면 입력된 값이 p태그에 보여지게
+                   'Init'버튼을 클릭하거나 esc를 누르면 값 초기화
+            (단, 입력될때마다 바뀐값은 보여지지않게)
+        -->
+        <button v-on:click="showText">click me</button>
+        <input type="text" v-model="afterText" v-on:keypress.enter="showText" v-on:keypress.esc="initText"> <!-- Event Modifire -->
+        <p>{{ beforeText }}</p>
+        <button v-on:click="initText">Init</button>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+    <script src="methods.js"></script>
+</body>
+</html>
