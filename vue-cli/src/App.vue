@@ -1,32 +1,22 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <!-- 컴포넌트 명명법 케이스 -->
-    <!-- <hello-world></hello-world> -->
-    <!-- <HelloWorld></HelloWorld> -->
-    <!-- <HelloWorld/> -->
-  </div>
+<!-- 이 안에 최상위 Element는 하나만 존재해야만 한다. -->
+    <div>
+        {{ str }}
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    // 기존에는 data라는 속성안에 데이터를 넣었지만 
+    // 이제 함수형태로 해서 객체를 return하는 형태여야한다.
+    data: function() {
+        return {
+            str: 'Hello! Vue Cli!',
+        }
+    }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
