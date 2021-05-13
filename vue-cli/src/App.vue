@@ -2,6 +2,10 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- 컴포넌트 명명법 케이스 -->
+    <!-- <hello-world></hello-world> -->
+    <!-- <HelloWorld></HelloWorld> -->
+    <!-- <HelloWorld/> -->
   </div>
 </template>
 
