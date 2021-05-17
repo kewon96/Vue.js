@@ -2,7 +2,7 @@
 <!-- 이 안에 최상위 Element는 하나만 존재해야만 한다. -->
     <div>
         <!-- {{ str }} -->
-        <AppHeader />
+        <AppHeader v-bind:propsdata="str"/>
     </div>
 </template>
 

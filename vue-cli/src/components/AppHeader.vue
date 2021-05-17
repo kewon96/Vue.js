@@ -2,17 +2,13 @@
      -> 한단어로 한다면 브라우저입장에선 이게 HTML Tag인지 컴포넌트인지 알 수 없음 -->
 <template>
   <header>
-      <h1>{{ str }}</h1>
+      <h1>{{ propsdata }}</h1>
   </header>
 </template>
 
 <script>
 export default {
-    data: function() {
-        return {
-            str: 'Header'
-        }
-    }
+    props: ['propsdata']
 }
 </script>
 
