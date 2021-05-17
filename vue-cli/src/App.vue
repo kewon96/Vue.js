@@ -2,7 +2,10 @@
 <!-- 이 안에 최상위 Element는 하나만 존재해야만 한다. -->
     <div>
         <!-- {{ str }} -->
-        <AppHeader v-bind:propsdata="str"/>
+        <AppHeader 
+            v-bind:propsdata="str"
+            v-on:renew="renewStr"
+        />
     </div>
 </template>
 
@@ -19,6 +22,11 @@ export default {
     },
     components: {
         'AppHeader': AppHeader
+    },
+    methods: {
+        renewStr: function() {
+            this.str = 'hi';
+        }
     }
 }
 </script>
